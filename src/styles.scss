@@ -1,0 +1,142 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  font-size: 14px;
+  background-color: #f3f3f3;
+
+}
+
+.step-group {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 50px;
+  transition: all 0.2s ease;
+}
+.step{
+  background-color: greenyellow;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  position: relative;
+  &.active {
+    background:#006400;
+    transition: all 0.3s ease;
+  }
+  &:nth-child(1)::before, 
+  &:nth-child(2)::before {
+    content:"";
+    width:62%;
+    position: absolute;
+    height:4px;
+    border:1px solid black;
+    border-radius: 5px;
+    left:100%;
+    top:50%;
+    
+    background-color: black;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+
+.form-group {
+  padding:17px 17px 0 17px;
+  display: flex;
+
+  & label  {
+    padding-right:60px;
+   font-size: 2.2rem;
+    font-weight: bold;
+    
+  }
+  & input,
+  .react-tel-input .form-control {
+    height:42px;
+    width:250px ;
+    background-color:greenyellow;
+    border-radius: 5px;
+    border:none;
+  }
+}
+
+button{
+  
+  width: 8%;
+  background-color:greenyellow;
+  border:none;
+  margin-left: 25%;
+  margin-top:20px;
+  font-size: 24px;
+  position: absolute;
+
+}
+
+@media screen and (max-width:600px){
+  button{
+width:25% ;
+margin-left:49%;
+
+  }
+  .form-group label{
+font-size: 26px;
+  }
+  input, .react-tel-input .form-control{
+    margin-left: 5px;
+  }
+  .address label{
+    margin-right: -30px;
+    
+  }
+  .gender label{
+    margin-right: -30px;
+  }
+.gender input{
+margin-left:10px;
+}
+}
+@media screen and (max-width:800px){
+  button{
+    width: 15%;
+    
+  }
+}
+ .back{
+  height: 20%;
+  width: 20%;
+  background-color:greenyellow;
+  border:none;
+margin-left: 10%;
+font-size: 24px;
+position: relative;
+}
+.address input{
+  height:100px;
+    width:248px ;
+    margin-left: -30px;
+}
+.address label{
+  display: flex;
+  align-items: center;
+ 
+}
+.gender input{
+  margin-left: -21px ;
+  width:248px;
+ 
+}
