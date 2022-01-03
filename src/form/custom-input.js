@@ -38,7 +38,7 @@ export const Input = ({
           />
         )}
       </div>
-      <div>{error[name]}</div>
+      <div className="error">{error[name]}</div>
     </>
   );
 };

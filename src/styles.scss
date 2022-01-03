@@ -86,7 +86,10 @@ button{
   position: absolute;
 
 }
-
+.error{
+  color: red;
+  
+}
 @media screen and (max-width:600px){
   button{
 width:28% ;
