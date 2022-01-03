@@ -1,4 +1,3 @@
-import PhoneInput from "react-phone-input-2";
 import { Input } from "./custom-input";
 import "react-phone-input-2/lib/style.css";
 

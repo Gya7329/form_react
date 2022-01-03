@@ -1,5 +1,4 @@
 import PhoneInput from "react-phone-input-2";
-
 export const Input = ({
   name: formName,
   handleBlur,
@@ -14,9 +13,12 @@ export const Input = ({
       <div class="form-group">
         <label htmlFor={name}>{formName}</label>
         {name === "phone" ? (
-          <PhoneInput className="phone-input"
+          <PhoneInput
+            className="phone-input"
             country={"in"}
+            countryCodeEditable={false}
             value={form.phone}
+            disabled={disabled}
             onChange={(phone) =>
               handleChange({
                 target: {
@@ -31,7 +33,6 @@ export const Input = ({
             value={form[name]}
             name={name}
             onChange={handleChange}
-            type="email"
             onBlur={handleBlur}
             disabled={disabled}
           />
